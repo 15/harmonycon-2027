@@ -2,6 +2,7 @@
 const previousEditions = [
 	{ year: '2026', url: 'https://2026.harmonycon.org' },
 	{ year: '2025', url: 'https://2025.harmonycon.org' },
+	{ year: '2024', url: 'https://2024.harmonycon.org' },
 ];
 ---
 
@@ -23,12 +24,17 @@ const previousEditions = [
 		/>
 		<meta property="og:url" content="https://harmonycon.org/" />
 		<link rel="canonical" href="https://harmonycon.org/" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<title>HarmonyCon 2027 — Coming Soon</title>
 	</head>
 	<body>
 		<main>
-			<p>HarmonyCon 2027</p>
-			<h1>Coming Soon</h1>
+			<h1>COMING SOON!</h1>
 
 			<nav aria-label="Previous HarmonyCon editions">
 				{
@@ -51,9 +57,7 @@ const previousEditions = [
 	:global(html) {
 		background: #f4f1eb;
 		color: #191917;
-		font-family:
-			Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-			sans-serif;
+		font-family: "Grandstander", ui-rounded, "Arial Rounded MT Bold", sans-serif;
 		font-synthesis: none;
 		text-rendering: optimizeLegibility;
 	}
@@ -72,40 +76,34 @@ const previousEditions = [
 		text-align: center;
 	}
 
-	p {
-		margin: 0 0 1.25rem;
-		font-size: 0.75rem;
-		font-weight: 650;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-	}
-
 	h1 {
 		margin: 0;
 		font-size: clamp(3.5rem, 13vw, 9.5rem);
-		font-weight: 450;
-		letter-spacing: -0.065em;
+		font-weight: 700;
+		letter-spacing: 0.02em;
 		line-height: 0.88;
 	}
 
 	nav {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1.5rem;
+		gap: clamp(2.5rem, 8vw, 5rem);
 		margin-top: clamp(2.5rem, 7vw, 5rem);
 	}
 
 	a {
-		border-bottom: 1px solid currentColor;
+		border-bottom: 3px solid currentColor;
 		color: inherit;
-		font-size: 0.875rem;
+		font-size: 3rem;
+		font-weight: 600;
 		letter-spacing: 0.08em;
 		padding: 0.25rem 0;
 		text-decoration: none;
 	}
 
 	a:hover {
-		border-bottom-width: 2px;
+		border-bottom-width: 4px;
 	}
 
 	a:focus-visible {
